@@ -1,0 +1,40 @@
+#!/bin/bash
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# INSTALL PACKAGES FROM FLATPACK
+
+# uncomment/comment groups you wish to (ex/in)clude
+
+source flatpack/flatpack-audio-players.sh
+source flatpack/flatpack-audio-production.sh
+source flatpack/flatpack-broadcast-over-ip.sh
+source flatpack/flatpack-communications.sh
+source flatpack/flatpack-development.sh
+source flatpack/flatpack-downloaders.sh
+source flatpack/flatpack-games.sh
+source flatpack/flatpack-graphics.sh
+source flatpack/flatpack-internet-tv-radio.sh
+source flatpack/flatpack-mapping-gis.sh
+source flatpack/flatpack-web-browsers.sh
+source flatpack/flatpack-writing.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "setting up the files"
+
+cp environment-vars.sh.template envoronment-vars.sh
+cp rpm-ostree-packages.sh.template rpm-ostree-packages.sh
+cp flatpak-packages.sh.template flatpak-packages.sh
+
+echo "done..."
+
+echo "edit the `envoronment-vars.sh`, `rpm-ostree-packages.sh` and `flatpak-packages.sh` files to match your desired settings then run `fedora-post-install-script-step-1.sh`"
+
