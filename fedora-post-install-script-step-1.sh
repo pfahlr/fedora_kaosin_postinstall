@@ -34,5 +34,9 @@ sudo grubby --update-kernel=ALL --args="nvidia-drm.modeset=1"
 #install ostree packages
 source rpm-ostree-packages.sh
 
+#run the installer
+
+rpm-ostree $PACKAGES
+
 #reboot
 echo "completed part 1, please reboot then run `fedora-post-install-script-part-2.sh`

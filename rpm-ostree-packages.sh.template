@@ -1,41 +1,38 @@
 #!/bin/bash
-
 PACKAGES=""
 # INSTALL PACKAGES FROM RPM-OSTREE
 # uncomment/comment sections you wish to (in/ex)clude
 
 # package installers
-PACKAGES = "$PACKAGES:snapd"
+PACKAGES+=" snapd"
 
 # downloaders
-PACKAGES = "$PACKAGES:aria2 qbittorrent"
+PACKAGES+=" aria2 qbittorrent"
 
 #office
-PACKAGES = "$PACKAGES:libreoffice"
+PACKAGES+=" libreoffice"
 
 #commandline utils
-PACKAGES = "$PACKAGES:vim-enhanced htop btop"
+PACKAGES+=" vim-enhanced htop btop"
 
 #development
-PACKAGES = "$PACKAGES:kate-plugins kate python3-virtualenv python3-pip python3-sen python3-visidata git-interactive-rebase-tool gitui"
+PACKAGES+=" kate-plugins kate python3-virtualenv python3-pip python3-sen python3-visidata git-interactive-rebase-tool gitui"
 
 #remote backup
-PACKAGES = "$PACKAGES:nextcloud-client"
+PACKAGES+=" nextcloud-client"
 
 #devops
-PACKAGES = "$PACKAGES:docker-buildx docker-compose docker-cli docker-compose-switch docker-distribution"
+PACKAGES+=" docker-buildx docker-compose docker-cli docker-compose-switch docker-distribution"
 
 # terminals and associated utils
-PACKAGES = "$PACKAGES:kitty alacritty chafa contour-terminal cosmic-term deepin-terminal maui-mauikit-station nemo-terminal podman-tui ptyxis qmlkonsole conman conmux consolation console-setup bicon jline-console glow thefuck gdu mc ov diskonaut foot  zsh tmux tmux-powerline tmux-top"
+PACKAGES+=" kitty alacritty chafa contour-terminal cosmic-term deepin-terminal maui-mauikit-station nemo-terminal podman-tui ptyxis qmlkonsole conman conmux consolation console-setup bicon jline-console glow thefuck gdu mc ov diskonaut foot zsh tmux tmux-powerline tmux-top"
 
 # mathematics packages
-PACKAGES = "$PACKAGES:gnuplot kmplot mp R R-devel R-systemfonts maxima maxima-gui wxMaxima python3-spyder python3-spyder-kernels python3-pyls-spyder pspp R-rstudioapi"
+PACKAGES+=" gnuplot kmplot mp R R-devel R-systemfonts maxima maxima-gui wxMaxima python3-spyder python3-spyder-kernels python3-pyls-spyder pspp R-rstudioapi"
 
 # audio production
-PACKAGES = "$PACKAGES:jack-audio-connection-kit jack-audio-connection-kit-dbus jack-example-tools-common   jaaa vlc-plugin-jack qjackctl a2jmidid  pipewire-plugin-jack  baresip-jack lsp-plugins-jack audacious-plugins-jack allegro-jack-plugin  alsa-plugins-jack arpage  japa ladspa-zam-plugins lv2-sorcer lv2-zam-plugins  meterbridge gitjacker  jacktrip"
-
+PACKAGES+=" jack-audio-connection-kit jack-audio-connection-kit-dbus jack-example-tools-common jaaa vlc-plugin-jack qjackctl a2jmidid pipewire-plugin-jack baresip-jack lsp-plugins-jack audacious-plugins-jack allegro-jack-plugin alsa-plugins-jack arpage japa ladspa-zam-plugins lv2-sorcer lv2-zam-plugins meterbridge gitjacker jacktrip"
 # pentesting
-PACKAGES = "$PACKAGES:gitjacker"
+PACKAGES+=" gitjacker"
 
-#running the installer
-rmp-ostree $PACKAGES
+echo "SELECTED PACKAGES: $PACKAGES"

@@ -6,18 +6,19 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 # uncomment/comment groups you wish to (ex/in)clude
 
-source flatpack/flatpack-audio-players.sh
-source flatpack/flatpack-audio-production.sh
-source flatpack/flatpack-broadcast-over-ip.sh
-source flatpack/flatpack-communications.sh
-source flatpack/flatpack-development.sh
-source flatpack/flatpack-downloaders.sh
-source flatpack/flatpack-games.sh
-source flatpack/flatpack-graphics.sh
-source flatpack/flatpack-internet-tv-radio.sh
-source flatpack/flatpack-mapping-gis.sh
-source flatpack/flatpack-web-browsers.sh
-source flatpack/flatpack-writing.sh
+source flatpak/flatpak-audio-players.sh
+source flatpak/flatpak-audio-production.sh
+source flatpak/flatpak-broadcast-over-ip.sh
+source flatpak/flatpak-communications.sh
+source flatpak/flatpak-development.sh
+source flatpak/flatpak-downloaders.sh
+source flatpak/flatpak-games.sh
+source flatpak/flatpak-graphics.sh
+source flatpak/flatpak-internet-tv-radio.sh
+source flatpak/flatpak-mapping-gis.sh
+source flatpak/flatpak-web-browsers.sh
+source flatpak/flatpak-writing.sh
+source flatpak/flatpak-cryptocurrency.sh
 
 
 
