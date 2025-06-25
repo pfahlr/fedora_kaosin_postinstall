@@ -23,6 +23,9 @@ curl -sS https://starship.rs/install.sh | sh
 #FLATPAK INSTALL
 
 echo "edit and run `./flatpak-packages.sh` to install the groups of flatpaks you wish to install."
-echo "note: flatpaks work by installing a complete set of dependencies for each program you install, this is similar to how programs are added on windows packaged along with a complete set of .DLLs. Given the option to install a program from the ostree vs a flatpak (unless you need a specific version), you should choose the ostree version." 
+echo "note: flatpaks work by installing a complete set of dependencies for each program you install."
+echo "This is similar to how programs are added on windows packaged along with a complete set of .DLLs."
+echo "Given the option to install a program from the ostree vs a flatpak..."
+echo "(unless a specific version is needed) the ostree version is likely the preferable option." 
 
 #source ./flatpak-packages.sh

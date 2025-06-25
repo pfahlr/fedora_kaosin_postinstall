@@ -25,7 +25,7 @@ sudo systemctl disable NetworkManager-wait-online.service
 sudo timedatectl set-local-rtc '0'
 
 #install ostree packages
-source rpm-ostree-packages.sh
+source ./rpm-ostree-packages.sh
 
 #run the installer
 sudo rpm-ostree install $PACKAGES

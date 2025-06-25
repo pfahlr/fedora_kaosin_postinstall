@@ -2,7 +2,7 @@
 
 echo "setting up the files"
 
-cp environment-vars.sh.template envoronment-vars.sh
+cp environment-vars.sh.template environment-vars.sh
 cp rpm-ostree-packages.sh.template rpm-ostree-packages.sh
 cp flatpak-packages.sh.template flatpak-packages.sh
 

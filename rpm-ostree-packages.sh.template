@@ -36,6 +36,9 @@ PACKAGES+=" gparted  htop iotop-c iftop atop nvtop bpftop bpytop "
 # TERMINALS AND TERMINAL EMULATORS
 PACKAGES+=" zsh alacritty chafa contour-terminal cosmic-term deepin-terminal maui-mauikit-station nemo-terminal podman-tui ptyxis qmlkonsole conman conmux consolation console-setup bicon jline-console glow thefuck gdu mc ov diskonaut foot tmux tmux-powerline tmux-top "
 
+# SSH
+PACKAGES+=" fuse-sshfs autossh clusterssh mpssh corkscrew endlessh keychain pam_ssh qemu-block-ssh "
+
 # mathematics packages
 PACKAGES+=" speedcrunch  kmplot mp R R-devel R-systemfonts maxima maxima-gui wxMaxima python3-spyder python3-spyder-kernels python3-pyls-spyder pspp R-rstudioapi "
 
