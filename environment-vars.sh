@@ -1,2 +1,0 @@
-#!/usr/bin/bash
-export NEW_HOSTNAME='thinkcentre-fedoralinux'
