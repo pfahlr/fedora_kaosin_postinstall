@@ -16,10 +16,7 @@ sudo fwupdmgr get-updates # Fetches list of available updates.
 sudo fwupdmgr update
 
 # improve dns handling
-sudo mkdir -p '/etc/systemd/resolved.conf.d' && sudo -e '/etc/systemd/resolved.conf.d/99-dns-over-tls.conf'
-[Resolve]
-DNS=1.1.1.2#security.cloudflare-dns.com 1.0.0.2#security.cloudflare-dns.com 2606:4700:4700::1112#security.cloudflare-dns.com 2606:4700:4700::1002#security.cloudflare-dns.com
-DNSOverTLS=yes
+sudo mkdir -p '/etc/systemd/resolved.conf.d' && sudo cp './config_files/99-dns-over-tls.conf' '/etc/systemd/resolved.conf.d/99-dns-over-tls.conf'
 
 # Disable NetworkManager-wait-online.service. This can decrease the boot time by at least ~15s-20s:
 sudo systemctl disable NetworkManager-wait-online.service
@@ -27,16 +24,14 @@ sudo systemctl disable NetworkManager-wait-online.service
 # set UTC time - Used to counter time inconsistencies in dual boot systems
 sudo timedatectl set-local-rtc '0'
 
-sudo grubby --update-kernel=ALL --args="mitigations=off"
-sudo grubby --update-kernel=ALL --args="nvidia-drm.modeset=1"
-
-
 #install ostree packages
 source rpm-ostree-packages.sh
 
 #run the installer
+sudo rpm-ostree install $PACKAGES
 
-rpm-ostree $PACKAGES
+sudo grubby --update-kernel=ALL --args="mitigations=off"
+sudo grubby --update-kernel=ALL --args="nvidia-drm.modeset=1"
 
 #reboot
 echo "completed part 1, please reboot then run `fedora-post-install-script-part-2.sh`
