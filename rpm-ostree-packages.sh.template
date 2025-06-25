@@ -28,7 +28,7 @@ PACKAGES+=" ghostwriter kate-plugins kate python3-virtualenv python3-pip python3
 PACKAGES+=" qgis qgis-grass qgis-server postgis postgis-client postgis-utils postgis-gui gdal python3-qgis grass grass-devel grass-gui grass-libs "
 
 #DEVOPS AND CONTAINERIZATION
-PACKAGES+=" kubernetes kubernetes-client kubernetes-kubeadm kubernetes-systemd helm cri-o buildah-tests atomic-reactor "
+PACKAGES+=" kubernetes kubernetes-client kubernetes-kubeadm kubernetes-systemd helm cri-o buildah-tests atomic-reactor  podman-docker  podman-machine podmansh podman-remote podman-tests "
 
 #SYSTEM ADMINISTRATION
 PACKAGES+=" gparted  htop iotop-c iftop atop nvtop bpftop bpytop "
