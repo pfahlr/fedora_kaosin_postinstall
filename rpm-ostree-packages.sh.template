@@ -16,13 +16,13 @@ PACKAGES+=" aria2 transmission "
 PACKAGES+="\t"
 
 # WORD PROCESSING
-PACKAGES+=" libreoffice ghostwriter "
+PACKAGES+=" libreoffice "
 # alt/extended
 #PACKAGES+="   "
 PACKAGES+="\t"
 
 # CLI UTILS
-PACKAGES+=" vim-enhanced most jrnl "
+PACKAGES+=" most jrnl "
 # alt/extended
 #PACKAGES+="   "
 PACKAGES+="\t"
@@ -40,15 +40,53 @@ PACKAGES+=" nmap netcat "
 PACKAGES+="\t"
 
 # DEVELOPMENT TOOLS AND COMPILERS
-PACKAGES+=" python3-virtualenv python3-pip python3-sen python3-visidata git-interactive-rebase-tool gitui nodejs nodejs-npm glow nodejs-libs nodejs-devel pnpm rust "
-# kde
+PACKAGES+=" git-interactive-rebase-tool gitui glow "
+
+# --- PYTHON
+PACKAGES+=" python3-virtualenv python3-pip python3-sen python3-visidata  "
+
+# --- NODE/JS
+PACKAGES+=" nodejs nodejs-npm nodejs-libs nodejs-devel pnpm  "
+
+# --- RUST
+PACKAGES+=" rust "
+
+# --- GO
+PACKAGES+=" golang golang-bin "
+
+# --- RUBY
+PACKAGES+=" ruby "
+
+# --- HASKELL
+PACKAGES+=" ghc "
+
+# --- PHP
+PACKAGES+=" php php-fpm php-cli php-gd php-mbstring php-mysqlnd php-mongodb php-pgsql "
+
+# --- C / C++
+PACKAGES+=" gcc gdb gcc-c++ libstdc++ "
+
+# --- ANDROID
+PACKAGES+=" android-tools waydroid abootimg adb-enhanced aemu "
+
+# TEXT EDITORS
+PACKAGES+=" cosmic-edit helix novelwriter featherpad leafpad ghostwriter "
+# CLI TEXT EDITORS
+PACKAGES+=" vim-enhanced emacs enki jedit joe yudit e3 lino  "
+# GNOME
+#PACKAGES+=" gedit "
+# KDE
 #PACKAGES+=" kate kate-plugins "
-# alt/extended
-#PACKAGES+=" ruby "
 PACKAGES+="\t"
 
 # DATABASES
 PACKAGES+=" postgresql-server postgresql mysql-server mysql  "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
+
+# DOCUMENT PROCESSING AND DATA EXTRACTION
+PACKAGES+=" tesseract  "
 # alt/extended
 #PACKAGES+="   "
 PACKAGES+="\t"
