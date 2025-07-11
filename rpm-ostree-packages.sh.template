@@ -3,55 +3,114 @@ PACKAGES=""
 # INSTALL PACKAGES FROM RPM-OSTREE
 # uncomment/comment sections you wish to (in/ex)clude
 
-# package installers
+# PACKAGE INSTALLERS
 PACKAGES+=" snapd "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-# downloaders
-PACKAGES+=" aria2 qbittorrent "
+# DOWNLOAD MANAGERS / TORRENTS ETC.
+PACKAGES+=" aria2 transmission "
+# alt/extended
+#PACKAGES+=" qbittorrent  "
+PACKAGES+="\t"
 
-#office
-PACKAGES+=" libreoffice "
+# WORD PROCESSING
+PACKAGES+=" libreoffice ghostwriter "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-#commandline utils
-PACKAGES+=" grubby vim-enhanced  "
+# CLI UTILS
+PACKAGES+=" vim-enhanced most jrnl "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-# computing tools
+# VARIOUS TOOLS
 PACKAGES+=" keepassxc nextcloud-client flameshot "
+# alt/extended
+#PACKAGES+=" wine "
+PACKAGES+="\t"
 
-# network tools
+# NETWORKING
 PACKAGES+=" nmap netcat "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-#development
-PACKAGES+=" ghostwriter kate-plugins kate python3-virtualenv python3-pip python3-sen python3-visidata git-interactive-rebase-tool gitui nodejs nodejs-npm glow nodejs-libs nodejs-devel pnpm postgresql "
+# DEVELOPMENT TOOLS AND COMPILERS
+PACKAGES+=" python3-virtualenv python3-pip python3-sen python3-visidata git-interactive-rebase-tool gitui nodejs nodejs-npm glow nodejs-libs nodejs-devel pnpm rust "
+# kde
+#PACKAGES+=" kate kate-plugins "
+# alt/extended
+#PACKAGES+=" ruby "
+PACKAGES+="\t"
 
-#GIS
+# DATABASES
+PACKAGES+=" postgresql-server postgresql mysql-server mysql  "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
+
+# GEOGRAPIC INFORMATION SYSTEMS (GIS)
 PACKAGES+=" qgis qgis-grass qgis-server postgis postgis-client postgis-utils postgis-gui gdal python3-qgis grass grass-devel grass-gui grass-libs "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-#DEVOPS AND CONTAINERIZATION
-PACKAGES+=" kubernetes kubernetes-client kubernetes-kubeadm kubernetes-systemd helm cri-o buildah-tests atomic-reactor  podman-docker  podman-machine podmansh podman-remote podman-tests "
+# DEVOPS AND CONTAINERIZATION
+PACKAGES+=" kubernetes kubernetes-client kubernetes-kubeadm kubernetes-systemd helm cri-o buildah-tests atomic-reactor podman-docker podman-machine podmansh podman-remote podman-tests podman-compose cockpit-podman docker-compose docker-compose-switch docker-distribution  "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-#SYSTEM ADMINISTRATION
-PACKAGES+=" gparted  htop iotop-c iftop atop nvtop bpftop bpytop "
+# SYSTEM ADMINISTRATION
+PACKAGES+=" gparted rEFInd rEFInd-tools grubby htop iotop-c iftop atop nvtop bpftop bpytop "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
 # TERMINALS AND TERMINAL EMULATORS
-PACKAGES+=" zsh alacritty chafa contour-terminal cosmic-term deepin-terminal maui-mauikit-station nemo-terminal podman-tui ptyxis qmlkonsole conman conmux consolation console-setup bicon jline-console glow thefuck gdu mc ov diskonaut foot tmux tmux-powerline tmux-top "
+PACKAGES+=" kitty zsh alacritty chafa contour-terminal cosmic-term deepin-terminal maui-mauikit-station nemo-terminal podman-tui ptyxis qmlkonsole conman conmux consolation console-setup bicon jline-console glow thefuck gdu mc ov diskonaut foot tmux tmux-powerline tmux-top "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
 # SSH
 PACKAGES+=" fuse-sshfs autossh clusterssh mpssh corkscrew endlessh keychain pam_ssh qemu-block-ssh "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-# mathematics packages
-PACKAGES+=" speedcrunch  kmplot mp R R-devel R-systemfonts maxima maxima-gui wxMaxima python3-spyder python3-spyder-kernels python3-pyls-spyder pspp R-rstudioapi "
+# MATHEMATICS
+PACKAGES+=" speedcrunch kmplot mp R R-devel R-systemfonts maxima maxima-gui wxMaxima python3-spyder python3-spyder-kernels python3-pyls-spyder pspp R-rstudioapi "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-# design packages
+# GRAPHIC DESIGN
 PACKAGES+=" inkscape gimp scribus "
+# alt/extended
+#PACKAGES+=" krita  "
+PACKAGES+="\t"
 
-# audio production
+# AUDIO/VIDEO PRODUCTION AND SOUND DESIGN
 PACKAGES+=" jack-audio-connection-kit jack-audio-connection-kit-dbus jack-example-tools-common jaaa vlc-plugin-jack qjackctl a2jmidid pipewire-plugin-jack baresip-jack lsp-plugins-jack audacious-plugins-jack allegro-jack-plugin alsa-plugins-jack arpage japa ladspa-zam-plugins lv2-sorcer lv2-zam-plugins meterbridge gitjacker jacktrip "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-#fonts
+# SYSTEM FONTS
 PACKAGES+=" cascadia-code-nf-fonts cascadia-mono-nf-fonts "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
-# pentesting
+# PENTESTING
 PACKAGES+=" gitjacker "
+# alt/extended
+#PACKAGES+="   "
+PACKAGES+="\t"
 
 echo "SELECTED PACKAGES: $PACKAGES"

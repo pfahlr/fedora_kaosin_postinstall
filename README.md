@@ -1,3 +1,4 @@
+
 # FEDORA POST INSTALL SCRIPT 
 
 ---
@@ -15,7 +16,7 @@ Mostly, I needed to leave a few parts out that did not apply.
 To begin run the ``start` script. It will propmt you to edit the `environment-vars.sh` script
 it copied the template into, and then run `fedora-postinstall-script-step-1.sh`.
 
->note: at this point, these scripts are very unstable. I recommend that you simply open them in the text editor of your choice and step through the commands running them individually. I've created a script to combine them all in order for easy viewing. run: `./scripts-2-instructions.sh`
+>note: at this point, these scripts are very unstable. I recommend that you simply open them in the text editor of your choice and step through the commands running them individually.
 
 
 After `fedora-postinstall-script-step-1.sh` completes a reboot is requried. Run `sudo reboot now`
