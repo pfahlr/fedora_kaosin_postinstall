@@ -158,7 +158,7 @@ PACKAGES+="\t"
 #PACKAGES+="\t"
 
 # DEVOPS AND CONTAINERIZATION
-PACKAGES+=" kubernetes kubernetes-client kubernetes-kubeadm kubernetes-systemd helm cri-o buildah-tests atomic-reactor podman-docker podman-machine podmansh podman-remote podman-tests podman-compose cockpit-podman docker-compose docker-compose-switch docker-distribution  "
+PACKAGES+=" ansible kubernetes kubernetes-client kubernetes-kubeadm kubernetes-systemd helm cri-o buildah-tests atomic-reactor podman-docker podman-machine podmansh podman-remote podman-tests podman-compose cockpit-podman docker-compose docker-compose-switch docker-distribution  "
 PACKAGES+="\t"
 
 # alt/extended
@@ -219,6 +219,10 @@ PACKAGES+="\t"
 
 # alt/extended
 PACKAGES+=" lyx-fonts php-tcpdf-dejavu-lgc-sans-fonts php-tcpdf-dejavu-lgc-sans-mono-fonts php-tcpdf-dejavu-lgc-serif-fonts php-tcpdf-dejavu-sans-fonts php-tcpdf-dejavu-sans-mono-fonts php-tcpdf-dejavu-serif-fonts php-tcpdf-gnu-free-mono-fonts php-tcpdf-gnu-free-sans-fonts php-tcpdf-gnu-free-serif-fonts lilypond-fonts-common lilypond-emmentaler-fonts libreoffice-opensymbol-fonts  gbdfed fontmake fontquery fontquery-builder   SDL3_ttf R-systemfonts R-sysfonts R-fontawesome  "
+PACKAGES+="\t"
+
+# ASCII ART
+PACKAGES+=" ditaa boxes caca-utils asciiquarium asciigraph ascii aalib asciinema "
 PACKAGES+="\t"
 
 # TEXLIVE
