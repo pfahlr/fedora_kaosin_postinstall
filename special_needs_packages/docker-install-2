@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#enable/start the service
+sudo systemctl enable --now docker.service
+
+
+

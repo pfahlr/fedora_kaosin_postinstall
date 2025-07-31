@@ -1,0 +1,7 @@
+#!/bin/bash
+#install the docker repository
+sudo rpm-ostree install docker-ce-repo && sudo rpm-ostree override remove moby-engine containerd runc && sudo rpm-ostree install docker-ce
+
+#reboot
+echo "run docker-install-2 after reboot"
+#sudo systemctl reboot
