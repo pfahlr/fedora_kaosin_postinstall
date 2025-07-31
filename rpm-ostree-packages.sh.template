@@ -1,154 +1,239 @@
 #!/usr/bin/bash
-PACKAGES=""
+PACKAGES="\t"
 # INSTALL PACKAGES FROM RPM-OSTREE
 # uncomment/comment sections you wish to (in/ex)clude
 
 # PACKAGE INSTALLERS
 PACKAGES+=" snapd "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # DOWNLOAD MANAGERS / TORRENTS ETC.
 PACKAGES+=" aria2 transmission "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+=" qbittorrent  "
+#PACKAGES+="\t"
+
+#WEB BROWSERS
+PACKAGES+=" chromium "
 PACKAGES+="\t"
 
 # WORD PROCESSING
 PACKAGES+=" libreoffice "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # CLI UTILS
 PACKAGES+=" most jrnl "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # VARIOUS TOOLS
 PACKAGES+=" keepassxc nextcloud-client flameshot "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+=" wine "
 PACKAGES+="\t"
 
 # NETWORKING
 PACKAGES+=" nmap netcat "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # DEVELOPMENT TOOLS AND COMPILERS
 PACKAGES+=" git-interactive-rebase-tool gitui glow "
+PACKAGES+="\t"
 
-# --- PYTHON
+# --- PYTHON --- 
 PACKAGES+=" python3-virtualenv python3-pip python3-sen python3-visidata  "
+PACKAGES+="\t"
 
-# --- NODE/JS
+# --- NODE/JS ---
 PACKAGES+=" nodejs nodejs-npm nodejs-libs nodejs-devel pnpm  "
+PACKAGES+="\t"
 
-# --- RUST
-PACKAGES+=" rust "
+# --- RUST --- 
+PACKAGES+=" rust cargo cargo-c cargo-insta  "
+PACKAGES+="\t"
 
-# --- GO
+# --- --- libraries used by linker
+PACKAGES+=" mysql-libs sqlite sqlite-libs libsqlite3x libpq libsq3 libpq-devel libpqxx libpqxx-devel rust-pq-sys-devel libsq3-devel libsqlite3x-devel rust-libsqlite3-sys+default-devel sqlite-devel uwsgi-plugin-sqlite3  "
+PACKAGES+="\t"
+
+# --- --- these ones are different, not sure what the deal is with these rust- prefixed packages. I aim to find out
+PACKAGES+=" rust-sqlx+_sqlite-devel rust-diesel+sqlite-devel rust-libsqlite3-sys-devel rust-diesel+serde_json-devel " 
+PACKAGES+="\t"
+
+# --- GO ---
 PACKAGES+=" golang golang-bin "
+PACKAGES+="\t"
 
-# --- RUBY
+# --- RUBY --- 
 PACKAGES+=" ruby "
+PACKAGES+="\t"
 
-# --- HASKELL
+# --- HASKELL ---
 PACKAGES+=" ghc "
+PACKAGES+="\t"
 
-# --- PHP
+# --- PHP ---
 PACKAGES+=" php php-fpm php-cli php-gd php-mbstring php-mysqlnd php-mongodb php-pgsql "
+PACKAGES+="\t"
 
-# --- C / C++
+# --- C / C++ ---
 PACKAGES+=" gcc gdb gcc-c++ libstdc++ "
+PACKAGES+="\t"
 
-# --- ANDROID
+
+# --- D: GCC and LLVM COMPILERS ---
+PACKAGES+=" gcc-gdc ldc "
+PACKAGES+="\t"
+
+# --- ANDROID ---
 PACKAGES+=" android-tools waydroid abootimg adb-enhanced aemu "
+PACKAGES+="\t"
+
+# --- GAME DEVELOPMENT ---
+PACKAGES+=" godot godot-runner "
+PACKAGES+="\t"
+
+# --- WEB DEVELOPMENT EXTRA ---
+PACKAGES+=" chromium-headless " 
+PACKAGES+="\t"
+
 
 # TEXT EDITORS
 PACKAGES+=" cosmic-edit helix novelwriter featherpad leafpad ghostwriter "
+PACKAGES+="\t"
+
 # CLI TEXT EDITORS
 PACKAGES+=" vim-enhanced emacs enki jedit joe yudit e3 lino  "
+PACKAGES+="\t"
+
 # GNOME
 #PACKAGES+=" gedit "
+#PACKAGES+="\t"
+
 # KDE
-#PACKAGES+=" kate kate-plugins "
+PACKAGES+=" kate kate-plugins "
 PACKAGES+="\t"
 
 # DATABASES
 PACKAGES+=" postgresql-server postgresql mysql-server mysql  "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # DOCUMENT PROCESSING AND DATA EXTRACTION
 PACKAGES+=" tesseract  "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # GEOGRAPIC INFORMATION SYSTEMS (GIS)
 PACKAGES+=" qgis qgis-grass qgis-server postgis postgis-client postgis-utils postgis-gui gdal python3-qgis grass grass-devel grass-gui grass-libs "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # DEVOPS AND CONTAINERIZATION
 PACKAGES+=" kubernetes kubernetes-client kubernetes-kubeadm kubernetes-systemd helm cri-o buildah-tests atomic-reactor podman-docker podman-machine podmansh podman-remote podman-tests podman-compose cockpit-podman docker-compose docker-compose-switch docker-distribution  "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # SYSTEM ADMINISTRATION
 PACKAGES+=" gparted rEFInd rEFInd-tools grubby htop iotop-c iftop atop nvtop bpftop bpytop "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # TERMINALS AND TERMINAL EMULATORS
 PACKAGES+=" kitty zsh alacritty chafa contour-terminal cosmic-term deepin-terminal maui-mauikit-station nemo-terminal podman-tui ptyxis qmlkonsole conman conmux consolation console-setup bicon jline-console glow thefuck gdu mc ov diskonaut foot tmux tmux-powerline tmux-top "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # SSH
 PACKAGES+=" fuse-sshfs autossh clusterssh mpssh corkscrew endlessh keychain pam_ssh qemu-block-ssh "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # MATHEMATICS
 PACKAGES+=" speedcrunch kmplot mp R R-devel R-systemfonts maxima maxima-gui wxMaxima python3-spyder python3-spyder-kernels python3-pyls-spyder pspp R-rstudioapi "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # GRAPHIC DESIGN
 PACKAGES+=" inkscape gimp scribus "
+PACKAGES+="\t"
+
 # alt/extended
-#PACKAGES+=" krita  "
+PACKAGES+=" krita  "
 PACKAGES+="\t"
 
 # AUDIO/VIDEO PRODUCTION AND SOUND DESIGN
 PACKAGES+=" jack-audio-connection-kit jack-audio-connection-kit-dbus jack-example-tools-common jaaa vlc-plugin-jack qjackctl a2jmidid pipewire-plugin-jack baresip-jack lsp-plugins-jack audacious-plugins-jack allegro-jack-plugin alsa-plugins-jack arpage japa ladspa-zam-plugins lv2-sorcer lv2-zam-plugins meterbridge gitjacker jacktrip "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 # SYSTEM FONTS
 PACKAGES+=" cascadia-code-nf-fonts cascadia-mono-nf-fonts "
+PACKAGES+="\t"
+
 # alt/extended
-#PACKAGES+="   "
+PACKAGES+=" lyx-fonts php-tcpdf-dejavu-lgc-sans-fonts php-tcpdf-dejavu-lgc-sans-mono-fonts php-tcpdf-dejavu-lgc-serif-fonts php-tcpdf-dejavu-sans-fonts php-tcpdf-dejavu-sans-mono-fonts php-tcpdf-dejavu-serif-fonts php-tcpdf-gnu-free-mono-fonts php-tcpdf-gnu-free-sans-fonts php-tcpdf-gnu-free-serif-fonts lilypond-fonts-common lilypond-emmentaler-fonts libreoffice-opensymbol-fonts  gbdfed fontmake fontquery fontquery-builder   SDL3_ttf R-systemfonts R-sysfonts R-fontawesome  "
+PACKAGES+="\t"
+
+# TEXLIVE
+PACKAGES+=" texlive  texlive-amsmath  "
+PACKAGES+="\t"
+# alt/extended
+PACKAGES+=" texlive-abbr texlive-abc texlive-biblatex-apa texlive-biblatex-cv  texlive-asciilist  texlive-autopdf  texlive-bardiag  texlive-anyfontsize texlive-addfont  asciidoc-latex asciidoc "
 PACKAGES+="\t"
 
 # PENTESTING
 PACKAGES+=" gitjacker "
+PACKAGES+="\t"
+
 # alt/extended
 #PACKAGES+="   "
-PACKAGES+="\t"
+#PACKAGES+="\t"
 
 echo "SELECTED PACKAGES: $PACKAGES"
